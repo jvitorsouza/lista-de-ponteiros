@@ -1,0 +1,5 @@
+2- 	p == &i; // resultado: 0x6dfee4
+*p - *q; // resultado: -2 
+**&p // resultado: 3
+*p/(*q)+7 // resultado: 10
+

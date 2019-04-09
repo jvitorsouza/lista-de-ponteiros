@@ -1,0 +1,10 @@
+4- 
+p = i; // 		Não pode porque o ponteiro armazena valores.
+q = &j; // 	permitida porque o ponteiro esta recebendo um			endereço.			
+p = &*&i; //	permitida pois o p esta recebendo o endereço de	i.
+i = (*&)j; // 	Não permitida.
+i = *&j; // 	Permitida porque o valor de i = j e os dois são			variáveis inteiras.
+i = *&*&j;	 //	permitida o i irá receber o que e
+q = *p; // 	Não é permitida pois q é um poteiro e so pode				 ser armazenado endereços. 
+i = (*p)++ + *q;// permitida, pois esta ocorrendo uma operaçao			com valores que estes ponteiros estao					 apontando. 
+
