@@ -1,0 +1,2 @@
+Com as aplicações de ponteiros, podemos otimizar o processamento dos programas, assim baixando o custo de processamento e de preço tambem. 
+Os ponteiros tem uma vasta aplicacao e sendo ultilizado corretamente tem uma eficacia muito grande.
