@@ -1,0 +1,4 @@
+
+p = mat + 1; -> Válido, já que adiciona quatro bytes no ponteiro para o primeiro elemento do vetor
+x = (*mat)++;-> Válido, faz a desrefêrencia do ponteiro para o primeiro elemento fazendo o incremento dele
+
