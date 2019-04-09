@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int compare (const void * a, const void * b)
+{
+  return ( *(int*)a - *(int*)b );
+}
+int main(void) {
+  float *V; //declaracao do vetor.
+  int n,i; // n: declaracao do tamanho do vetor, i: ira servi                      para as contagens.
+  float aux; // declaracao da variavel que ira auxiliar na ordenacao.
+  V =  (float*) malloc(n*sizeof(float)); // aloca o vetor dinamicamente.
+
+    printf("Adicione o tamanho do vetor:\n");
+    scanf("%d",&n); // entrada do tamanho do vetor .
+
+  while (n < 0){  // garantindo que o usuario ira entrar com valor valido.
+    printf("Adicione o tamanho do vetor:\n");
+    scanf("%d",&n);
+  }
+  printf("entre com os valores do vetor:\n");
+
+  for(i=0; i<n; i++){ // entrada dos valores do vetor.
+    scanf("%e",&V[i]);
+  }
+
+  printf("tamanho do vetor: %d\n",n);
+
+  qsort(V, n, sizeof(float), compare);
+
+
+  for (i=0; i<n; i++){  // imprimi o vetor.
+    printf("Valores de V, %e\n",V[i]);
+}
+  free(V); // libera o espaço alocado na memoria.
+  return 0;
+
+}
