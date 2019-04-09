@@ -1,0 +1,53 @@
+
+/* O programa ira  ler n valores do tipo float e apresentar em ordem crescente, Utilizando alocação dinâmica de memória.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+
+    float *V; //declaracao do vetor.
+    int n,i; // n: declaracao do tamanho do vetor, i: ira servi                      para as contagens.
+    float aux; // declaracao da variavel que ira auxiliar na ordenacao.
+    V =  (float*) malloc(n*sizeof(float)); // aloca o vetor dinamicamente.
+
+    printf("Adicione o tamanho do vetor:\n");
+    scanf("%d",&n); // entrada do tamanho do vetor .
+
+    while (n < 0)   // garantindo que o usuario ira entrar com valor valido.
+    {
+        printf("Adicione o tamanho do vetor:\n");
+        scanf("%d",&n);
+    }
+    printf("entre com os valores do vetor:\n");
+
+    for(i=0; i<n; i++)  // entrada dos valores do vetor.
+    {
+        scanf("%e",&V[i]);
+    }
+
+    printf("tamanho do vetor: %d\n",n);
+
+    for(int j=0; j<n; j++)  //
+    {
+        for (i=0; i<n; i++)
+        {
+            if (V[i]>V[i+1])
+            {
+
+                aux = V[i]; // expressoes que organizam o vetor de forma crescente.
+                V[i]=V[i+1];
+                V[i+1]=aux;
+            }
+        }
+    }
+    for (i=0; i<n; i++)   // imprimi o vetor.
+    {
+        printf("Valores de V, %e\n",V[i]);
+    }
+    free(V); // libera o espaço alocado na memoria.
+    return 0;
+
+}
